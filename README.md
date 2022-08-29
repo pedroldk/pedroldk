@@ -1,5 +1,13 @@
 ### Hi there 👋
 
+I'm a Solutions Architect and Software Engineer with 10 years of experience in multiple industries (Healthcare, Logistics, Transportation, Finance, Energy) currently working for Zühlke.
+
+- 🔭 I’m currently specialized on AWS, C#/.NET and Python. Also have interest in Go, Rust and Dart.
+
+- 📫 How to reach me:  ![<LinkedIn>](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+
+
+
 <!--
 **pedroldk/pedroldk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +22,4 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
