@@ -4,7 +4,7 @@ I'm a Solutions Architect and Software Engineer with 10 years of experience in m
 
 - 🔭 I’m currently specialized on AWS, C#/.NET and Python. Also have interest in Go, Rust and Dart.
 
-- 📫 How to reach me:  ![<LinkedIn>](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
+- 📫 How to reach me:  ![https://www.linkedin.com/in/pedro-c-coelho/](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
 
 
 
