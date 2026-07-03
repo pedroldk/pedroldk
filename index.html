@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Animated GitHub profile page built with Anime.js.">
+    <title>Pedro | Animated Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub profile page</p>
+          <h1 id="intro-title">
+            Hi, I am <span>Pedro</span>. I build useful things with code.
+          </h1>
+          <p class="lede">
+            A fast, animated profile page powered by Anime.js, ready to publish with GitHub Pages.
+          </p>
+          <div class="actions" aria-label="Profile links">
+            <a class="button primary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button secondary" href="#work">Projects</a>
+          </div>
+        </div>
+
+        <div class="profile-visual" aria-label="Animated developer dashboard">
+          <div class="portrait">
+            <div class="portrait-grid" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="initials">P</div>
+          </div>
+          <div class="console-card">
+            <div class="window-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <pre><code><span class="muted">const</span> focus = [
+  "frontend",
+  "automation",
+  "creative tools"
+];</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Profile highlights">
+        <article>
+          <strong>01</strong>
+          <span>Static, Pages-ready setup</span>
+        </article>
+        <article>
+          <strong>02</strong>
+          <span>Anime.js motion layer</span>
+        </article>
+        <article>
+          <strong>03</strong>
+          <span>Easy to personalize</span>
+        </article>
+      </section>
+
+      <section id="work" class="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Projects with a little kinetic polish.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="tag">Web</p>
+            <h3>Portfolio System</h3>
+            <p>Responsive profile, project highlights, and animated details.</p>
+          </article>
+          <article class="project-card">
+            <p class="tag">Tools</p>
+            <h3>Automation Lab</h3>
+            <p>Small scripts and workflows that save attention for better work.</p>
+          </article>
+          <article class="project-card">
+            <p class="tag">Creative</p>
+            <h3>Motion Experiments</h3>
+            <p>Interfaces that use animation as feedback instead of decoration.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
