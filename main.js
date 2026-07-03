@@ -9,7 +9,7 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
 if (reduceMotion) {
   document
-    .querySelectorAll(".hero-copy, .profile-visual, .stats article, .project-card, .expertise, .timeline-item")
+    .querySelectorAll(".hero-copy, .profile-visual, .stats article, .capability-card, .expertise, .timeline-item")
     .forEach((item) => {
       item.style.opacity = 1;
     });
@@ -54,14 +54,14 @@ if (reduceMotion) {
     loop: true
   });
 
-  animate(".project-card", {
+  animate(".capability-card", {
     opacity: [0, 1],
     y: [36, 0],
     duration: 760,
     delay: stagger(120),
     ease: "outExpo",
     autoplay: onScroll({
-      target: ".project-grid",
+      target: ".capability-grid",
       enter: "bottom-=120 top",
       sync: false
     })
