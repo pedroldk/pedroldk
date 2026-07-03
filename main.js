@@ -9,7 +9,7 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 
 if (reduceMotion) {
   document
-    .querySelectorAll(".hero-copy, .profile-visual, .stats article, .project-card")
+    .querySelectorAll(".hero-copy, .profile-visual, .stats article, .project-card, .expertise, .timeline-item")
     .forEach((item) => {
       item.style.opacity = 1;
     });
@@ -63,6 +63,44 @@ if (reduceMotion) {
     autoplay: onScroll({
       target: ".project-grid",
       enter: "bottom-=120 top",
+      sync: false
+    })
+  });
+
+  animate(".skill-cloud span", {
+    scale: [0.92, 1],
+    opacity: [0, 1],
+    duration: 520,
+    delay: stagger(45),
+    ease: "outExpo",
+    autoplay: onScroll({
+      target: ".expertise",
+      enter: "bottom-=120 top",
+      sync: false
+    })
+  });
+
+  animate(".expertise", {
+    opacity: [0, 1],
+    y: [28, 0],
+    duration: 720,
+    ease: "outExpo",
+    autoplay: onScroll({
+      target: ".expertise",
+      enter: "bottom-=120 top",
+      sync: false
+    })
+  });
+
+  animate(".timeline-item", {
+    opacity: [0, 1],
+    x: [-24, 0],
+    duration: 660,
+    delay: stagger(90),
+    ease: "outExpo",
+    autoplay: onScroll({
+      target: ".timeline-list",
+      enter: "bottom-=140 top",
       sync: false
     })
   });

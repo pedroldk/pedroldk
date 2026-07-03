@@ -1,6 +1,6 @@
 # Animated GitHub Profile Page
 
-This is a static GitHub Pages profile page powered by Anime.js.
+This is Pedro Coelho's static GitHub Pages profile page, powered by Anime.js.
 
 ## Local preview
 
@@ -23,8 +23,7 @@ Then visit `http://localhost:8080`.
 
 ## Personalize it
 
-- Replace `Pedro` in `index.html` with your display name.
-- Update the GitHub link in the hero buttons.
-- Replace the project cards with your real repositories.
+- Update the profile copy in `index.html`.
+- Replace or expand the experience timeline.
 - Edit `styles.css` colors and spacing.
 - Add more Anime.js effects in `main.js`.
