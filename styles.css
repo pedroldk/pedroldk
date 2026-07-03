@@ -143,22 +143,66 @@ h1 {
 
 .profile-visual {
   position: relative;
-  min-height: 520px;
+  min-height: 500px;
 }
 
-.ai-orbit {
+.ai-panel {
   position: absolute;
-  inset: 0 0 auto auto;
+  inset: 32px 0 auto auto;
   width: min(430px, 88vw);
-  aspect-ratio: 1;
+  min-height: 430px;
+  border: 1px solid rgba(247, 242, 232, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(117, 184, 255, 0.17), rgba(255, 138, 107, 0.08)),
+    rgba(23, 27, 34, 0.78);
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
   pointer-events: none;
+}
+
+.ai-panel::before {
+  content: "";
+  position: absolute;
+  inset: 52px 20px 20px;
+  border: 1px solid rgba(247, 242, 232, 0.11);
+  border-radius: 6px;
+  background:
+    linear-gradient(rgba(247, 242, 232, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 242, 232, 0.06) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: linear-gradient(to bottom, black, transparent 92%);
+}
+
+.panel-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(247, 242, 232, 0.1);
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.panel-header span:first-child {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--mint);
+  box-shadow: 0 0 24px rgba(125, 226, 197, 0.65);
 }
 
 .orbit-lines {
   position: absolute;
-  inset: 0;
+  inset: 46px 28px 0 auto;
   width: 100%;
-  height: 100%;
+  max-width: 340px;
+  height: 300px;
   fill: none;
   stroke: rgba(247, 242, 232, 0.14);
   stroke-width: 1;
@@ -171,6 +215,7 @@ h1 {
 
 .orbit-token {
   position: absolute;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -189,31 +234,32 @@ h1 {
 }
 
 .token-ai {
-  left: 38%;
-  top: 12%;
+  left: 42%;
+  top: 24%;
   color: var(--gold);
 }
 
 .token-codex {
-  right: 2%;
-  top: 38%;
+  right: 10%;
+  top: 45%;
   color: var(--mint);
 }
 
 .token-claude {
-  left: 4%;
+  left: 10%;
   top: 48%;
   color: var(--coral);
 }
 
 .token-copilot {
-  right: 18%;
-  bottom: 8%;
+  right: 20%;
+  bottom: 20%;
   color: var(--sky);
 }
 
 .signal-node {
   position: absolute;
+  z-index: 2;
   width: 12px;
   height: 12px;
   border-radius: 999px;
@@ -222,30 +268,31 @@ h1 {
 }
 
 .node-a {
-  left: 20%;
-  top: 24%;
+  left: 22%;
+  top: 32%;
 }
 
 .node-b {
   right: 25%;
-  top: 58%;
+  top: 60%;
   background: var(--gold);
   box-shadow: 0 0 0 8px rgba(242, 202, 82, 0.1), 0 0 28px rgba(242, 202, 82, 0.5);
 }
 
 .node-c {
   left: 42%;
-  bottom: 18%;
+  bottom: 24%;
   background: var(--coral);
   box-shadow: 0 0 0 8px rgba(255, 138, 107, 0.1), 0 0 28px rgba(255, 138, 107, 0.5);
 }
 
 .rocket-ship {
   position: absolute;
-  left: 19%;
+  z-index: 4;
+  left: 18%;
   bottom: 18%;
-  width: 58px;
-  height: 58px;
+  width: 48px;
+  height: 48px;
   fill: var(--ink);
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.3));
   transform-origin: center;
@@ -268,52 +315,12 @@ h1 {
   fill: var(--gold);
 }
 
-.portrait {
-  position: absolute;
-  inset: 92px 48px auto auto;
-  width: min(340px, 78vw);
-  aspect-ratio: 1;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: linear-gradient(145deg, rgba(117, 184, 255, 0.22), rgba(255, 138, 107, 0.18)), var(--panel);
-  overflow: hidden;
-}
-
-.portrait::before {
-  content: "";
-  position: absolute;
-  inset: 16px;
-  border: 1px solid rgba(247, 242, 232, 0.2);
-  border-radius: 6px;
-}
-
-.portrait-grid {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.portrait-grid span {
-  border: 1px solid rgba(247, 242, 232, 0.08);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.initials {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(6rem, 15vw, 10rem);
-  font-weight: 800;
-  color: var(--ink);
-}
-
 .console-card {
   position: absolute;
-  left: 0;
-  bottom: 24px;
-  width: min(420px, 88vw);
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+  z-index: 5;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(23, 27, 34, 0.9);
@@ -346,7 +353,7 @@ h1 {
 
 pre {
   margin: 0;
-  padding: 22px;
+  padding: 18px 20px;
   overflow: auto;
   color: var(--ink);
   font-family: "JetBrains Mono", monospace;
@@ -592,23 +599,21 @@ h3 {
   }
 
   .profile-visual {
-    min-height: 430px;
+    min-height: 470px;
   }
 
-  .portrait {
-    inset: 0 auto auto 50%;
-    transform: translateX(-50%);
-  }
-
-  .ai-orbit {
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(370px, 94vw);
+  .ai-panel {
+    left: 0;
+    right: auto;
+    width: min(100%, 390px);
+    min-height: 420px;
   }
 
   .console-card {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 14px;
+    right: 14px;
+    width: auto;
+    transform: none;
   }
 
   .stats,

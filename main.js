@@ -59,11 +59,10 @@ if (reduceMotion) {
       x: [42, 0],
       duration: 900
     }, "-=520")
-    .add(".portrait-grid span", {
-      opacity: [0.15, 0.9],
-      scale: [0.82, 1],
-      duration: 620,
-      delay: stagger(42, { grid: [4, 3], from: "center" })
+    .add(".ai-panel", {
+      scale: [0.96, 1],
+      opacity: [0, 1],
+      duration: 720
     }, "-=520")
     .add(".orbit-token", {
       opacity: [0, 1],
@@ -85,16 +84,16 @@ if (reduceMotion) {
       delay: stagger(95)
     }, "-=260");
 
-  animate(".initials", {
-    y: [-8, 8],
-    duration: 2400,
+  animate(".ai-panel", {
+    y: [-6, 6],
+    duration: 4200,
     ease: "inOutSine",
     alternate: true,
     loop: true
   });
 
   animate(".console-card", {
-    rotate: [-1.4, 1.4],
+    rotate: [-0.7, 0.7],
     duration: 3600,
     ease: "inOutSine",
     alternate: true,
@@ -129,9 +128,9 @@ if (reduceMotion) {
   });
 
   animate(".rocket-ship", {
-    x: [0, 36, 76, 32, 0],
-    y: [0, -42, -84, -34, 0],
-    rotate: [8, 24, 38, 18, 8],
+    x: [0, 24, 50, 20, 0],
+    y: [0, -28, -56, -24, 0],
+    rotate: [8, 18, 30, 16, 8],
     duration: 5200,
     ease: "inOutSine",
     loop: true
